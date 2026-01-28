@@ -22,9 +22,7 @@ def saveData(data: NDArray, filename: str) -> None:
 
 	if not os.path.exists(PATH_DATA):
 		os.mkdir(PATH_DATA)
-	
-	if type(data) != NDArray:
-		raise TypeError(f'data should be a numpy array, found {type(data)} instead')
+
 	
 	# don't overwrite filename
 	if os.path.exists(full_filename):
